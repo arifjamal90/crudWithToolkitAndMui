@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo, removeTodo, updateTodo } from "../redux/slices/CrudSlice";
-import {Box, Button, Container, TextField, Typography} from "@mui/material"
+import {Box, Button, Container, TextField, Typography, Divider} from "@mui/material"
 
 interface Todo {
   id: number;
@@ -115,11 +115,17 @@ const About = () => {
 {todos.map((todo: Todo, index: number) => (
   <Box key={index} sx={{ display: "flex" ,justifyContent:"space-between", paddingY:"10px" }}>
     <Typography>{todo.fname}</Typography>
+    <Divider orientation="vertical"  flexItem />
     <Typography>{todo.lname}</Typography>
+    <Divider orientation="vertical"  flexItem />
     <Typography>{todo.email}</Typography>
+    <Divider orientation="vertical"  flexItem />
     <Typography>{todo.password}</Typography>
+    <Divider orientation="vertical"  flexItem />
     <Button variant="contained" color="error" onClick={() => handleDelete(todo.id)}>Delete</Button>
+    <Divider orientation="vertical"  flexItem />
     <Button variant="contained" color="info" onClick={() => handleEdit(todo)}>Edit</Button>
+    
   </Box>
 ))}
 </Container>

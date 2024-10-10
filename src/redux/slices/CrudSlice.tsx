@@ -9,11 +9,13 @@ interface TodoState {
     password: string;
     id?: number;
   }>;
+  
 }
 
 
 const initialState: TodoState = {
   data: [],
+  
 };
 
 

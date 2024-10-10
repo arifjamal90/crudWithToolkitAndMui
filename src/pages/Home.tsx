@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     if (createId) {
       setTodos(
         todos.map((item) =>
-          item.id === createId ? { ...item, fname: input.fname, lname: input.lname } : item
+          item.id === createId ? {...item, fname:input.fname, lname:input.fname} : item
         )
       );
       setCreateId(null); 
